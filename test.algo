@@ -1,0 +1,73 @@
+
+    Tableau A ← [3, 1, 7, 9]
+    Tableau B ← [2, 4, 1, 9, 3]
+    somme ← 0
+
+    Pour i de 0 à longueur(A) - 1 faire
+        Si A[i] n’est pas dans B alors
+            somme ← somme + A[i]
+
+    Pour j de 0 à longueur(B) - 1 faire
+        Si B[j] n’est pas dans A alors
+            somme ← somme + B[j]
+
+    Afficher "La somme des éléments distincts est :", somme
+
+
+
+
+Procédure dot_product(v1, v2, n, ps)
+    ps ← 0
+    Pour i de 0 à n-1 faire
+        ps ← ps + v1[i] * v2[i]
+Fin Procédure
+
+
+
+    Entrer n
+    Pour k de 1 à n faire
+        Entrer taille ← taille du vecteur
+        Initialiser v1[taille], v2[taille]
+
+        Pour i de 0 à taille - 1 faire
+            Entrer v1[i]
+
+        Pour i de 0 à taille - 1 faire
+            Entrer v2[i]
+
+        Appeler dot_product(v1, v2, taille, ps)
+
+        Si ps = 0 alors
+            Afficher "Les vecteurs", k, "sont orthogonaux"
+        Sinon
+            Afficher "Les vecteurs", k, "ne sont pas orthogonaux"
+
+
+
+Fonction dot_product(v1, v2, n)
+    ps ← 0
+    Pour i de 0 à n - 1 faire
+        ps ← ps + v1[i] * v2[i]
+    Retourner ps
+
+
+
+
+    Entrer n
+    Pour k de 1 à n faire
+        Entrer taille ← taille du vecteur
+        Initialiser v1[taille], v2[taille]
+
+        Pour i de 0 à taille - 1 faire
+            Entrer v1[i]
+
+        Pour i de 0 à taille - 1 faire
+            Entrer v2[i]
+
+        ps ← dot_product(v1, v2, taille)
+
+        Si ps = 0 alors
+            Afficher "Les vecteurs", k, "sont orthogonaux"
+        Sinon
+            Afficher "Les vecteurs", k, "ne sont pas orthogonaux"
+Fin
