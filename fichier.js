@@ -15,7 +15,7 @@ console.log("Entrez une phrase caractère par caractère (terminez par un point 
 function lireCaractere() {
   rl.question("Entrer un caractère : ", (caractere) => {
     if (caractere === '.') {
-      longueur += 1; // on compte aussi le point final
+      longueur += 1; 
       console.log("\nRésultats :");
       console.log("Longueur de la phrase :", longueur);
       console.log("Nombre de mots :", nb_mots);
@@ -34,7 +34,7 @@ function lireCaractere() {
       nb_mots += 1;
     }
 
-    lireCaractere(); // appel récursif pour lire le caractère suivant
+    lireCaractere(); 
   });
 }
 
